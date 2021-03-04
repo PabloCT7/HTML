@@ -1,6 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
-<!--fsdfsdf-->
+<!DOCTYPE html>
+<!--
+  Author: Danas
+  Date: 03/03/2021
+  Update for: Pablo CT
+-->
 
 <head>
   <title>Estructura de Texto</title>
@@ -8,11 +11,17 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />  
   <link rel="alternate" type="application/rss+xml" title="Resumen de todos los artículos del blog" href="/feed.xml" />
 
+  <!--Motores de Bisqueda-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="description" content="Ejemplo de XHTML y HTML5"/>
   <meta name="keywords" content="HTML5, HTML, XHTML"/>
   <meta name="author" content="Dannas"/>
   
+  <!-- Para redes sociales og-->
+  <meta property="og:title" content="Estructura de Texto"/>
+  <meta property="og:description" contente="Ejemplo de HTML5"/>
+  <meta property="og:author" content=" ">
+
   <script type="text/javascript">
     //<![CDATA[
       window.onload = function() { alert("La página se ha cargado exitosamente :)"); }
@@ -21,16 +30,22 @@
 </head>
 
 <body>
-<noscript>
+<noscript> <!--Notifica si el borwser que necesita JS-->
   <p>Bienvenidos.</p>
   <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
 Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
 </noscript>
-<img src="logotipo.gif" alt="Logotipo de esta página" />
+<img src="chems.jpg" alt="Logotipo de esta página" /> 
 <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">Descarga un ZIP</a></li> 
-    <li><a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicitar Información</a></li>
+    <li>
+      <a href="#">Inicio</a>
+    </li>
+    <li>
+      <a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">Descarga un ZIP</a>
+    </li> 
+    <li>
+      <a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicitar Información</a>
+    </li>
   </ul>
 <hr/>
 <h2>Lenguajes de marcado.</h2>
@@ -42,9 +57,17 @@ Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
   <dd>Lenguaje basado en SGML y que se emplea para describir datos</dd>
  
   <dt>RSS</dt>
+  <dd>Formato que cumple con el estándar XML para compartir contenido en la web. Se utiliza para difundir información actualizada a usuarios que se han suscrito a una fuente de contenidos.</dd>
+
   <dt>GML</dt>
+  <dd> Es un sublenguaje de XML descrito como una gramática en XML Schema para el modelaje, transporte y almacenamiento de información geográfica. </dd>
+
   <dt>XHTML</dt>
+  <dd>Lenguaje de marcado que te permite editar webs. Está basado en HTML 4.01, pero sus reglas son mucho más estrictas y versátiles que HTML. XHTML es una nueva formulación de HTML que utiliza el meta lenguaje de marcado XML, lo cual es una ventaja clave en su usabilidad porque muchos formatos de datos están basados en XML y los dispositivos modernos requieren una versión estricta del lenguaje de marcado porque no pueden mostrar mal el código fuente.</dd>
+
   <dt>SVG</dt>
+  <dd>Formato vectorial poco conocido pero muy útil para su uso online por su flexibilidad y por la capacidad de ofrecer gráficos con calidad.</dd>
+
   <dt>XUL</dt>
   <dd>Lenguajes derivados de XML para determinadas aplicaciones</dd>
 </dl>
@@ -56,10 +79,18 @@ Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
 por el <acronym title="World Wide Web Consortium"><strong><em>W3C</em></strong></acronym>.</p>
 
 <h3>HTML 5</h3>
-<p><acronym title="HyperText Markup Language, versión 5"><strong><em>HTML5</em></strong></acronym> es la quinta revisión importante del lenguaje básico de la World Wide Web, HTML. HTML5 especifica dos variantes de sintaxis para HTML: un <em>«clásico»</em> HTML (text/html), la variante conocida como HTML5 y una variante XHTML conocida como sintaxis XHTML5 que deberá ser servida como XML.Esta es la primera vez que HTML y XHTML se han desarrollado en paralelo.</p>
-
-<p><code>&lt;section&gt;,&lt;nav&gt;,&lt;article&gt;,&lt;aside&gt;,&lt;footer&gt;,&lt;video&gt;,&lt;audio&gt;, entre otros.</code></p>
-
+<p><acronym title="HyperText Markup Language, versión 5">
+  <strong>
+    <em>
+      HTML5
+    </em></strong>
+  </acronym> 
+  es la quinta revisión importante del lenguaje básico de la World Wide Web, HTML. HTML5 especifica dos variantes de sintaxis para HTML: un <em>«clásico»</em> HTML (text/html), la variante conocida como HTML5 y una variante XHTML conocida como sintaxis XHTML5 que deberá ser servida como XML.Esta es la primera vez que HTML y XHTML se han desarrollado en paralelo.</p>
+<p>
+  <!--Para poner código sin interpretar-->
+  <code>&lt;section&gt;,&lt;nav&gt;,&lt;article&gt;,&lt;aside&gt;,&lt;footer&gt;,&lt;video&gt;,&lt;audio&gt;, entre otros </code>
+</p>
+<!--Tabla-->
 <table align="center" border="3">
 <caption>Caractéres especiales</caption>
 <thead>
@@ -155,7 +186,7 @@ El éxito de las .com dependía de webs más dinámicas (a veces llamadas Web 1.
 <img src="imagen.gif" usemap="#mapa_zonas" /> 
 <map name="mapa_zonas">
   <area shape="rect" coords="20,25,84,113" href="#" />
-  <area shape="polygon" coords="90,25,162,26,163,96,89,25,90,24" href="#" />
+  <area shape="poly" coords="90,25,162,26,163,96,89,25,90,24" href="#" />
   <area shape="circle" coords="130,114,29" href="#" />
   <area shape="rect" coords="19,156,170,211" href="#" />
   <area shape="default" nohref="nohref" />
